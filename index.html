@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Learning Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300&family=Roboto+Slab:wght@300;400&family=Source+Sans+3&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Header Section starts -->
+    <header>
+      <nav>
+        <div class="logo">
+          <h3>EdSkill</h3>
+        </div>
+
+        <div class="nav-links">
+          <ul class="menu">
+            <li><a id="Home" href="/home">Home</a></li>
+            <li><a id="About" href="/about">About</a></li>
+            <li><a id="Courses" href="/courses">Courses</a></li>
+            <li><a id="Services" href="/services">Services</a></li>
+            <li><a id="Contact" href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="authentication">
+          <!-- <button type="button" class="login-signup btn btn-light"><a href="/signup">SignUp / Login</a></button> -->
+          <button id="loginSignup" class="login-signup">SignUp / Login</button>
+        </div>
+
+        <select id="languageSelector" onchange="switchLanguage()">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <!-- Add more language options as needed -->
+        </select>
+
+        <!-- <div class="profile">
+          <i class="fa-solid fa-user"></i>
+        </div> -->
+      </nav>
+
+      <!--Hero Section starts  -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 id="heroTitle" class="hero-title">
+            Unleash your Potential with us!
+          </h1>
+          <p id="heroSubtitle" class="hero-subtitle">  Unleash your potential with our engaging learning courses designed to inspire and empower. Join us on a journey of discovery and growth.</p>
+          <a href="#" id="heroButton" class="hero-button">Get Started</a>
+        </div>
+        <div class="hero-component-image">
+          <img class="hero-image" src="" alt="" />
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <div class="course-content">
+        <div class="courses">
+          <div class="course-heading">
+            <h2>
+              <span class="first-letter">P</span>OPULAR
+              <span class="first-letter">C</span>OURSES
+            </h2>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/website design"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Web Development Fundamentals</h5>
+              <p class="card-text">
+                Learn the basics of web development, including HTML, CSS, and JavaScript to build responsive websites
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/codes"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Python Programming for Beginners</h5>
+              <p class="card-text">
+                Dive into the world of Python programming and projects with this beginner-friendly course.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/artificial intelligence"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Data Science and Machine Learning</h5>
+              <p class="card-text">
+                Explore the principles of data science and machine learning.Analyze data and build predictive models with Python libraries.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/graphics"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Graphic Design Essentials
+              </h5>
+              <p class="card-text">
+                Master the essentials of graphic design, including typography, color theory, and layout principles using softwares like Adobe Photoshop. 
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/hacker"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">CyberSecurity Fundamentals</h5>
+              <p class="card-text">
+                Learn threat detection, network security, and data protection basics from cyber attacks to protect digital assets.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/photography"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/video editing"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="card course-card" style="width: 18rem">
+            <img
+              src="https://source.unsplash.com/300x200/?courses/science"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-blogs">
+        <div class="blogs">
+          <h2>
+            <span class="first-letter">P</span>OPULAR
+            <span class="first-letter">B</span>LOGS
+          </h2>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="/images/7.jpg"
+                alt="First slide"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h2>Welcome to Code Magic</h2>
+                <p>Dive into the World of Tech, Code and Developement.</p>
+                <button class="btn btn-danger">Technology</button>
+                <button class="btn btn-primary">Blockchain</button>
+                <button class="btn btn-success">A.I.</button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="/images/2.jpg"
+                alt="Second slide"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h2>The Best Coding Blog</h2>
+                <p>Dive into the World of Tech, Code and Developement.</p>
+                <button class="btn btn-danger">Java</button>
+                <button class="btn btn-primary">C</button>
+                <button class="btn btn-success">Python</button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="/images/3.jpg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h2>Blog on Robogenix</h2>
+                <p>Dive into the World of Tech, Code and Developement.</p>
+                <button class="btn btn-danger">Android Science</button>
+                <button class="btn btn-primary">Nano-robotics</button>
+                <button class="btn btn-success">A.I.</button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Upskill section -->
+      <section class="upskill-section">
+        <div class="upskill-left">
+          <!-- <h1>Upskilling Employees the is Key!</h1> -->
+          <div class="upskill-content">
+            <h2>Strengthen critical skills across every team</h2>
+            <p class="upskill-para">
+              Increase business impact and agility with in-demand Generative AI,
+              tech, data, and leadership skills.
+            </p>
+            <ul class="upskill-points">
+              <li>
+                Use role-based assessments to identify skills gaps and
+                advancement opportunities
+              </li>
+              <li>
+                Advance skills in roles that drive rapid transformation for your
+                company
+              </li>
+              <li>
+                Enhance leadership skills to engage, navigate, and motivate
+                employees amid change
+              </li>
+              <li>
+                Learn and apply skills faster with hands-on projects and
+                personalized learning
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary">Click to Upskill</button>
+        </div>
+        <div class="upskill-right">
+          <img class="upskill-image" src="./images/InDemandSkills_1_5x.png" alt="">
+        </div>
+      </section>
+
+      <!-- Learners Section -->
+      <section class="learners-section">
+        <h2 class="section-title">Search our catalog of world-class content</h2>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="e.g. Data Science">
+          <button class="search-button">Search</button>
+        </div>
+        <div class="popular-courses">
+          <h3>Popular Trending Courses:</h3>
+          <div class="tags">
+            <span class="tag">Web Development</span>
+            <span class="tag">A.I.</span>
+            <span class="tag">Business</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Digital Marketing</span>
+            <span class="tag">Arts & Humanities</span>
+            <span class="tag">Health</span>
+            <!-- Add more tags as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Learners Across countries -->
+      <section class="leaners-countries">
+        <div class="learners-countries-text">
+          <span>Providing online education to</span>
+          <h2>Learners Across 170+ Countries</h2>
+        </div>
+        <div class="learners-countries-image">
+          <img src="./images/learners_banner.png" alt="">
+        </div>
+      </section>
+      
+
+      <section class="alumni"></section>
+    </main>
+
+    <!-- Footer starts -->
+    <footer class="footer bg-primary">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-4 mt-4 col-lg-3 text-center text-sm-start">
+                  <div class="information">
+                      <h6 class="footer-heading text-uppercase text-white fw-bold">Information</h6>
+                      <ul class="list-unstyled footer-link mt-4">
+                          <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">Events</a></li>
+                          <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">Our Team</a></li>
+                          <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">Upcoming Sale</a></li>
+                          <li class=""><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">New Launches</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-4 mt-4 col-lg-3 text-center text-sm-start">
+                  <div class="resources">
+                      <h6 class="footer-heading text-uppercase text-white fw-bold">Resources</h6>
+                      <ul class="list-unstyled footer-link mt-4">
+                          <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">API</a></li>
+                          <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">Website Tutorials</a></li>
+                          <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">Third Party</a></li>
+                          <li class=""><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white text-decoration-none fw-semibold">Video Lectures</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-4 mt-4 col-lg-2 text-center text-sm-start">
+                <div class="social">
+                    <h6 class="footer-heading text-uppercase text-white fw-bold">Social</h6>
+                    <ul class="list-inline my-4">
+                      <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white btn-sm btn btn-primary mb-2"><i class="bi bi-facebook"></i></a></li>
+                      <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-danger btn-sm btn btn-light mb-2"><i class="bi bi-instagram"></i></a></li>
+                      <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white btn-sm btn btn-primary mb-2"><i class="bi bi-twitter"></i></a></li>
+                      <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor" class="text-white btn-sm btn btn-success mb-2"><i class="bi bi-whatsapp"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+              <div class="col-sm-6 col-md-6 mt-4 col-lg-4 text-center text-sm-start">
+                <div class="contact">
+                    <h6 class="footer-heading text-uppercase text-white fw-bold">Contact Us</h6>
+                    <address class="mt-4 m-0 text-white mb-1"><i class="bi bi-pin-map fw-semibold"></i> New South Block , Phase 8B , 160055</address>
+                    <a href="tel:+" class="text-white mb-1 text-decoration-none d-block fw-semibold"><i class="bi bi-telephone"></i>  909090XXXX</a>
+                    <a href="mailto:" class="text-white mb-1 text-decoration-none d-block fw-semibold"><i class="bi bi-envelope"></i> xyzdemomail@gmail.com</a>
+                    <a href="" class="text-white text-decoration-none fw-semibold"><i class="bi bi-skype"></i> xyzdemomail</a>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="text-center bg-dark text-white mt-4 p-1">
+          <p class="mb-0 fw-bold">2024 © Ayash Kumar Behera, All Rights Reserved</p>
+      </div>
+    </footer>
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
